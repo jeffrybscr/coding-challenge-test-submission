@@ -1,4 +1,3 @@
-// solves TODO: Create an <ErrorMessage /> component for displaying an error message
 import React, { FunctionComponent } from "react";
 import styles from "./ErrorMessage.module.css";
 

@@ -1,7 +1,7 @@
 import { ButtonType, ButtonVariant } from "@/types";
 import React, { FunctionComponent } from "react";
 
-import $ from "./Button.module.css";
+import styles from "./Button.module.css";
 
 interface ButtonProps {
   onClick?: () => void;
@@ -18,10 +18,9 @@ const Button: FunctionComponent<ButtonProps> = ({
   variant = "primary",
   loading = false,
 }) => {
-  // TODO: Add conditional classNames - done: added variant-based classNames and loading spinner
   const buttonClassName = variant === "secondary"
-    ? `${$.button} ${$.secondary}`
-    : `${$.button} ${$.primary}`;
+    ? `${styles.button} ${styles.secondary}`
+    : `${styles.button} ${styles.primary}`;
 
   return (
     <button
@@ -30,7 +29,7 @@ const Button: FunctionComponent<ButtonProps> = ({
       onClick={onClick}
       disabled={loading}
     >
-      {loading && <span data-testid="loading-spinner" className={$.spinner} />}
+      {loading && <span data-testid="loading-spinner" className={styles.spinner} />}
       {children}
     </button>
   );

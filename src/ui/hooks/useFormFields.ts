@@ -1,4 +1,3 @@
-// solves TODO: Write a custom hook to set form fields in a more generic way
 import React from "react";
 
 interface FormFields {
