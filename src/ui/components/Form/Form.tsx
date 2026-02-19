@@ -4,12 +4,16 @@ import Button from '../Button/Button';
 import InputText from '../InputText/InputText';
 import $ from './Form.module.css';
 
+// TODO: Defined a suitable type for extra props - done: created InputTextExtraProps
+interface InputTextExtraProps {
+  value: string;
+  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+}
+
 interface FormEntry {
   name: string;
   placeholder: string;
-  // TODO: Defined a suitable type for extra props
-  // This type should cover all different of attribute types
-  extraProps: any;
+  extraProps: InputTextExtraProps;
 }
 
 interface FormProps {

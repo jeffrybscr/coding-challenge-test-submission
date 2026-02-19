@@ -1,0 +1,14 @@
+// solves TODO: Create an <ErrorMessage /> component for displaying an error message
+import React, { FunctionComponent } from "react";
+import styles from "./ErrorMessage.module.css";
+
+interface ErrorMessageProps {
+  message: string;
+}
+
+const ErrorMessage: FunctionComponent<ErrorMessageProps> = ({ message }) => {
+  if (!message) return null;
+  return <div className={styles.error}>{message}</div>;
+};
+
+export default ErrorMessage;

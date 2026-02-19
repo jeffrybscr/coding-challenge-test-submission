@@ -1,0 +1,10 @@
+.error {
+  color: #dc3545;
+  background-color: rgba(220, 53, 69, 0.1);
+  border: 1px solid rgba(220, 53, 69, 0.3);
+  border-radius: var(--border-radius-default);
+  padding: 0.75em 1em;
+  margin: 0.5em 0;
+  max-width: var(--width-input);
+  font-size: 0.9em;
+}

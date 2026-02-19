@@ -22,4 +22,44 @@
 
 /** TODO: Create separate styles for .primary and .secondary variants of this button:
 * - Must use the CSS variables declared in App.css
+* - done: added .primary and .secondary styles below
 */
+
+/* primary button - uses brand color */
+.primary {
+  background-color: var(--color-brand);
+  border: 2px solid var(--color-brand);
+}
+
+.primary:hover {
+  background-color: #322ed6;
+}
+
+/* secondary button - outlined style */
+.secondary {
+  background-color: transparent;
+  border: 2px solid var(--color-brand);
+  color: var(--color-brand);
+}
+
+.secondary:hover {
+  background-color: rgba(65, 62, 247, 0.1);
+}
+
+/* loading spinner */
+.spinner {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: white;
+  animation: spin 0.8s linear infinite;
+  margin-right: 8px;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

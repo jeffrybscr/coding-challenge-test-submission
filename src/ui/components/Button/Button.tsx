@@ -18,16 +18,19 @@ const Button: FunctionComponent<ButtonProps> = ({
   variant = "primary",
   loading = false,
 }) => {
+  // TODO: Add conditional classNames - done: added variant-based classNames and loading spinner
+  const buttonClassName = variant === "secondary"
+    ? `${$.button} ${$.secondary}`
+    : `${$.button} ${$.primary}`;
+
   return (
     <button
-      // TODO: Add conditional classNames
-      // - Must have a condition to set the '.primary' className
-      // - Must have a condition to set the '.secondary' className
-      // - Display loading spinner per demo video. NOTE: add data-testid="loading-spinner" for spinner element (used for grading)
-      className={$.button}
+      className={buttonClassName}
       type={type}
       onClick={onClick}
+      disabled={loading}
     >
+      {loading && <span data-testid="loading-spinner" className={$.spinner} />}
       {children}
     </button>
   );
